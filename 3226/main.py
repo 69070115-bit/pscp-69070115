@@ -1,10 +1,7 @@
-""" Inflation"""
-n = float(input())
-k = int(input())
-
-for _ in range(k):
-    increase = n * 0.0381
-    increase = int(increase * 100) / 100
-    n += increase
-
-print(f"{n:.2f}")
+"""Inflation"""
+price = int(float(input()) * 100)
+time = int(input())
+i = 381
+for _ in range(time):
+    price += (price * i) // 10000
+print(f"{price // 100}.{price % 100:02d}")
